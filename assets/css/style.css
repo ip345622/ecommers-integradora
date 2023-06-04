@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* -----------------------------------------variables---------------------------------- */
+:root{
+    --fondo-header:#FFFFFF;
+    --buscador: #918E8E;
+    --fondo-footer: #000000;
+    --orange: #EA8239;
+    --fondo-mision:#DC8749;
+    --fondo-vision:#FFFFFF;
+    --color-vision:#BDA16A;
+    --marron:#8F2C02;
+    --reseta: #EA942F;
+}
+
+/* ------------------------------------------inicio----------------------------------- */
+header{
+    width: 100%;
+    height: 170px;
+    border-bottom: 1px solid #000000;
+}
+#toggler, .navbar label{
+    display: none;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--fondo-header);
+}
+.navbar .menu a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    margin: 15px;
+    margin-top: 0px;
+}
+.list__menu{
+    list-style: none;
+    display: flex;
+    gap: 100px;
+}
+.list__menu li{
+    margin: auto;
+}
+.buscador{
+    float: right;
+    margin-right: 100px;
+}
+.buscador input:focus {
+    outline: none;
+  }
+  
+.buscador input:nth-child(1){
+    width: 300px;
+    height: 40px;
+    border: none;
+    background: var(--buscador);
+}
+.buscador input:nth-child(2){
+    width: 100px;
+    height: 40px;
+    margin-left: -4px;
+    border: none;
+    background: var(--orange);
+    color: var(--fondo-header);
+}
+
+/* adaptacion a movil */
+@media screen and (max-width:600px) {
+    header{
+        border: none;
+    }
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        font-size: 3vh;
+    }
+    .list__menu{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar #toggler{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler{
+        /* Oculta el checkbox original */
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+         /* Establece el ancho y alto del checkbox */
+         width: 50px;
+         height: 50px;
+         /* Establece el fondo como el SVG deseado */
+         background-image: url('../icon/bars-menu.svg');
+         background-size: cover;
+         background-repeat: no-repeat;
+    }
+    #toggler:checked ~ .menu{
+        max-height: 100%;
+        max-height: 20%;
+    }
+    .buscador{
+        margin-right: 70px;
+    }
+    .buscador input:nth-child(2){
+        margin-left: -7px;
+    }
+}
+/* ------------------------------------------main----------------------------------- */
+
+
+/* ------------------------------------------footer----------------------------------- */
+
+footer a{
+    display: block;
+    color: var(--fondo-mision);
+}
+
+.social{
+    border-top:2px solid var(--orange) ;
+    display: flex;
+    justify-content: space-around;
+}
+.siguenos .redes{
+    display: flex;
+}
+.reservados{
+    width: 100%;
+    background: var(--fondo-footer);
+    color: var(--fondo-header);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
