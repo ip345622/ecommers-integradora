@@ -9,6 +9,7 @@ import Courses from './page/courses'
 import Further from './page/further'
 
 import Navbar from './components/navbar'
+import Footer from './components/footer/footer'
 import './App.css'
 
 const AppRoutes = () => {
@@ -31,8 +32,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <AppRoutes />
-
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 }
