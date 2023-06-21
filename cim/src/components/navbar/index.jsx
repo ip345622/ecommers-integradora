@@ -10,29 +10,29 @@ const Navbar = () => {
         <li className='font-semibold text-lg'>
           <div>
           <NavLink to='/'>
-            Home
+            Inicio
           </NavLink>
           </div>
         </li>
         <li>
           <div>
           <NavLink
-            to='/us'
+            to='/nosotros'
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-            us
+            Nosotros
           </NavLink>
           </div>
         </li>
         <li>
           <div>
           <NavLink
-            to='/products'
+            to='/productos'
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-            products
+              
           </NavLink>
           </div>
         </li>
@@ -50,11 +50,10 @@ const Navbar = () => {
         <li>
           <div>
           <NavLink
-            to='/contactanos'
+            to='/recipes'
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-            contactanos
           </NavLink>
           </div>
         </li>
