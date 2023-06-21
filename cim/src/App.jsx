@@ -32,6 +32,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <AppRoutes />
+
       {/* <Footer /> */}
     </BrowserRouter>
   )
