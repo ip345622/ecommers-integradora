@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-// import {logo} from '../../assets/icon/logo-cim'
+import { logo } from '../../assets/icon/logo-cim.png'
 
 const Navbar = () => {
   const activeStyle = 'underline underline-offset-4'
@@ -43,7 +43,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-            {/* <img src={logo} alt="" /> */}
+            <img src={logo} alt="" />
           </NavLink>
           </div>
         </li>
@@ -54,6 +54,18 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
+              Recetas
+          </NavLink>
+          </div>
+        </li>
+        <li>
+          <div>
+          <NavLink
+            to='/recipes'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+              Recetas
           </NavLink>
           </div>
         </li>
