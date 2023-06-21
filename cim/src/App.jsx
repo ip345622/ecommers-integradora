@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 
-import Start from './page/start'
+import Inicio from './page/start'
 import Products from './page/products'
 import Us from './page/us'
 import Recipes from './page/recipes'
@@ -14,7 +14,7 @@ import './App.css'
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: '/', element: <Start /> },
+    { path: '/', element: <Inicio /> },
     { path: '/proyectos', element: <Products /> },
     { path: '/nosotros', element: <Us /> },
     { path: '/contactanos', element: <Recipes /> },
