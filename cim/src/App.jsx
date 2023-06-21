@@ -9,17 +9,16 @@ import Courses from './page/courses'
 import Further from './page/further'
 
 import Navbar from './components/navbar'
-// import Footer from './components/footer'
 import './App.css'
 
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', element: <Inicio /> },
-    { path: '/proyectos', element: <Products /> },
+    { path: '/productos', element: <Products /> },
     { path: '/nosotros', element: <Us /> },
-    { path: '/contactanos', element: <Recipes /> },
-    { path: '/contactanos', element: <Courses /> },
-    { path: '/contactanos', element: <Further /> }
+    { path: '/recetas', element: <Recipes /> },
+    { path: '/cursos', element: <Courses /> },
+    { path: '/mas', element: <Further /> }
   ])
 
   return routes
