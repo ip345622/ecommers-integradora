@@ -14,7 +14,7 @@ const Navbar = () => {
         <li className='font-semibold text-lg'>
           <div>
           <NavLink to='/'>
-            Home
+            Inicio
           </NavLink>
           </div>
         </li>
@@ -25,7 +25,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-            us
+            Nosotros
           </NavLink>
           </div>
         </li>
@@ -36,7 +36,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-            products
+            Productos
           </NavLink>
           </div>
         </li>
@@ -58,7 +58,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-              Recipes
+              Recetas
           </NavLink>
           </div>
         </li>
@@ -69,7 +69,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-              Courses
+              Cursos
           </NavLink>
           </div>
         </li>
@@ -80,7 +80,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-              Further
+              Más
           </NavLink>
           </div>
         </li>
