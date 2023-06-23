@@ -14,71 +14,68 @@ const Home = () => {
             </div>
 
             <div>
-                <div className="flex justify-center items-center">
-                    <h2>Bienvenido a</h2>
-                    <img src={logoCim} alt="" />
+                <div className="mb-10 mt-10">
+                    <div className="flex justify-center items-center">
+                        <h2 className="text-5xl">Bienvenido a</h2>
+                        <img src={logoCim} alt="" />
+                    </div>
+                    <div className="flex justify-center items-center mx-30 text-center">
+                        <p className="text-lg">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
+                            Cupiditate repudiandae voluptates possimus vero culpa quod libero corrupti rerum! Voluptas nisi, 
+                            sequi eaque ipsam aliquam suscipit. <br />
+                            Minima sapiente aspernatur quisquam excepturi?
+                        </p>
+                    </div>
                 </div>
-                <div className="flex justify-center items-center mx-30 text-center">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-                        Cupiditate repudiandae voluptates possimus vero culpa quod libero corrupti rerum! Voluptas nisi, 
-                        sequi eaque ipsam aliquam suscipit. <br />
-                        Minima sapiente aspernatur quisquam excepturi?
-                    </p>
-                </div>
-                <div className="border border-solid border-[#EA8239] "></div>
+                <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
                 <div>
-                    <h3>Lo que necesitas para tus platillos</h3>
+                    <h3 className="text-[#EA8239] mb-10 ml-28 text-2xl font-semibold">Lo que necesitas para tus platillos</h3>
                     <div className="grid grid-flow-col items-center justify-evenly">
-                        <div>
-                            <p className="absolute text-white">Chocolates</p>
+
+                        <div className="flex items-center justify-center">
+                            <p className="absolute text-white text-3xl">Chocolates</p>
                             <img className="" src={cacao} alt="imagenCacao" />
                         </div>
-                        <div>
-                            <p className="absolute text-white">Cocina</p>
+                        <div className="flex items-center justify-center">
+                            <p className="absolute text-white text-3xl">Cocina</p>
                             <img src={cocina} alt="imagenCacao" />
                         </div>
-                        <div>
-                            <p className="absolute text-white">Decoraciones</p>
-                            <img src={decoraciones} alt="imagenCacao" />
+                        <div className="flex items-center justify-center">
+                            <p className="absolute text-white text-3xl">Decoraciones</p>
+                            <img  src={decoraciones} alt="imagenCacao" />
                         </div>
                     </div>
-                    <div>
-                        <button className="bg-slate-500">Mas Productos</button>
+                    <div className="flex justify-center my-10">
+                        <button className="bg-[#EA8239] p-3 rounded-md text-white font-medium text-lg">Mas Productos</button>
                     </div>
 
-                    <div className="border border-solid border-[#EA8239] "></div>
+                    <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
 
                     <div>
-                        <div>
-                            <img src={brownie} alt="" />
-                        </div>
-                        <div>
-                            <h3>Receta de Brownie</h3>
-                            <p>Deja a todos encantados con estos deliciosos Brownies  y solo necesitas: {''}</p>
-                            <ul>
-                                <li>1/2 taza harina para hornear</li>
-                                <li>1/8 cucharadita de sal</li>
-                                <li>170gr chocolate semiamargo confitier Turin</li>
-                                <li>170gr de mantequilla sin sal a temperatura ambiente</li>
-                                <li>3 huevos a temperatura ambiente</li>
-                            </ul>
-                            <button>Receta</button>
+                        <div className="flex justify-center gap-20 my-20">
+                            <div>
+                                <img className="" src={brownie} alt="" />
+                            </div>
+                            <div className="">
+                                <h3 className="text-center text-3xl">Receta de Brownie</h3>
+                                <p className="text-center my-5 text-2xl">Deja a todos encantados con estos deliciosos Brownies  y solo necesitas: {''}</p>
+                                <ul className="list-disc list-outside my-5 text-xl">
+                                    <li className="p-2">1/2 taza harina para hornear</li>
+                                    <li className="p-2">1/8 cucharadita de sal</li>
+                                    <li className="p-2">170gr chocolate semiamargo confitier Turin</li>
+                                    <li className="p-2">170gr de mantequilla sin sal a temperatura ambiente</li>
+                                    <li className="p-2">3 huevos a temperatura ambiente</li>
+                                </ul>
+                                <div className="flex justify-center my-10">
+                                    <button className="bg-[#EA8239] text-2xl text-white rounded-md py-3 px-10">Receta</button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="border border-solid border-[#EA8239] "></div>
+                        <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
 
-                        <div>
-                            <h3>Cursos del Dia</h3>
-                            <div>
-                                <p>Quieres preparar deliciosos postres pero no sabes como?</p>
-                                <p>En CIM contamos con cursos presenciales para que aprendas a preparar delicioso postres para ti y para tus amigos o familiares.</p>
-                                <p>No esperes mas y descrubre como puedes participar y aprender deliciosas recetas. </p>  
-                            </div>
-                            <button>Cursos</button>
-                            <div>
-                                <img src={macaronFresa} alt="" />
-                            </div>
+                        <div className="">
                         </div>
 
                     </div>
