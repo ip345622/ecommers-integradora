@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 
-import Inicio from './page/start'
-import Productos from './page/products'
-import Nosotros from './page/us'
-import Recetas from './page/recipes'
+import Inicio from './page/inicio'
+import Productos from './page/productos'
+import Nosotros from './page/nosotros'
+import Recetas from './page/recetas'
 import Ubicaciones from './page/ubicaciones'
-import Mas from './page/further'
+import Mas from './page/mas'
 
 import Navbar from './components/navbar'
 import Footer from './components/footer/footer'
