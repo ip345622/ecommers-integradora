@@ -65,11 +65,11 @@ const Navbar = () => {
         <li>
           <div>
           <NavLink
-            to='/cursos'
+            to='/ubicaciones'
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-              Cursos
+              Ubicaciones
           </NavLink>
           </div>
         </li>

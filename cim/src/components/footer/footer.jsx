@@ -30,16 +30,16 @@ const Footer = () => {
                     <a href= "/" className="block">Inicio</a>
                     <a href= "nosotros" className="block">Nosotros</a>
                     <a href= "productos" className="block">Productos</a>
-                    <a href= "recetas" className="block">Inicio</a>
+                    <a href= "Cursos" className="block">Cursos</a>
                     </div>
                 </div>
                 {/* siguenos en */}
                 <div className="mt-10">
                     <p>SIGUENOS EN</p>
                     <div className="flex">
-                        <img src={facebook} alt="facebook" />                    
-                        <img src={instalgram} alt="instalgram" />                    
-                        <img src={pinteres} alt="pinteres" />     
+                        <a href="#"><img src={facebook} alt="facebook" /></a>
+                        <a href="#"><img src={instalgram} alt="instalgram" /></a>                    
+                        <a href="#"><img src={pinteres} alt="pinteres" /></a>     
                     </div>                   
                 </div>                
             </div>
