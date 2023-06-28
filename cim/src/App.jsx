@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 
+// paginas
 import Inicio from './page/inicio'
 import Productos from './page/productos'
 import Nosotros from './page/nosotros'
