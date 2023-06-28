@@ -1,17 +1,22 @@
-import ListadoProductos from "../../components/listadoProductos";
-import { useState, useEffect } from "react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Products = () => {
-    return(
-        <div>
-            <main className="contenedor">
-                <h1 className="heading">Nuestra colección</h1>
+export default function Products() {
+  const [products, setProducts] = useState([]);
 
-                <ListadoProductos />
-            </main>
-        </div>
-    )
+  useEffect(() => {
+    fetch('http://localhost:1337/api/guitarras?populate=imagen')
+      .then(response => response.json())
+      .then(data => setProducts(data));
+  }, []);
+
+  return (
+    <div>
+      <h1>Product List</h1>
+      <ul>
+        {products.map(product => (
+          <li key={product.id}>{product.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
-
-export default Products;
