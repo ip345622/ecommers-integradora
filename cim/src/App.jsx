@@ -1,25 +1,26 @@
 import { useState } from 'react'
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 
-import Start from './page/start'
-import Products from './page/products'
-import Us from './page/us'
-import Recipes from './page/recipes'
-import Courses from './page/courses'
-import Further from './page/further'
+// paginas
+import Inicio from './page/inicio'
+import Productos from './page/productos'
+import Nosotros from './page/nosotros'
+import Recetas from './page/recetas'
+import Ubicaciones from './page/ubicaciones'
+import Mas from './page/mas'
 
 import Navbar from './components/navbar'
-// import Footer from './components/footer'
+import Footer from './components/footer/footer'
 import './App.css'
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: '/', element: <Start /> },
-    { path: '/proyectos', element: <Products /> },
-    { path: '/nosotros', element: <Us /> },
-    { path: '/contactanos', element: <Recipes /> },
-    { path: '/contactanos', element: <Courses /> },
-    { path: '/contactanos', element: <Further /> }
+    { path: '/', element: <Inicio /> },
+    { path: '/productos', element: <Productos /> },
+    { path: '/nosotros', element: <Nosotros /> },
+    { path: '/recetas', element: <Recetas /> },
+    { path: '/ubicaciones', element: <Ubicaciones /> },
+    { path: '/mas', element: <Mas /> }
   ])
 
   return routes
@@ -32,7 +33,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <AppRoutes />
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 }
