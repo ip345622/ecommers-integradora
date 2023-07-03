@@ -3,91 +3,99 @@ import { useState, useEffect } from "react";
 import React from "react";
 
 const Cart = () => {
-    const [items, setItems] = useState([]);
-  
-    const addToCart = (product) => {
-      setItems([...items, product]);
-    };
-  
-    const removeFromCart = (index) => {
-      const updatedItems = [...items];
-      updatedItems.splice(index, 1);
-      setItems(updatedItems);
-    };
-  
-    const cartStyle = {
-      display: 'flex',
-      justifyContent: 'space-between',
-      margin: '20px',
-    };
-  
-    const cartItemsStyle = {
-      width: '50%',
-    };
-  
-    const productListStyle = {
-      width: '50%',
-    };
-  
-    const listItemStyle = {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginBottom: '10px',
-    };
-  
-    const buttonStyle = {
-      padding: '5px 10px',
-      backgroundColor: '#333',
-      color: '#fff',
-      border: 'none',
-      cursor: 'pointer',
-    };
-  
-    return (
-      <div style={cartStyle}>
-        <h2>Carrito de Compras</h2>
-        <div style={cartItemsStyle}>
-          {items.length === 0 ? (
-            <p>No hay productos en el carrito.</p>
-          ) : (
-            <ul>
-              {items.map((item, index) => (
-                <li key={index} style={listItemStyle}>
-                  <span>{item.name}</span>
-                  <button onClick={() => removeFromCart(index)} style={buttonStyle}>
-                    Eliminar
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-        <div style={productListStyle}>
-          <h3>Productos Disponibles</h3>
-          <ul>
-            <li style={listItemStyle}>
-              <span>Producto 1</span>
-              <button onClick={() => addToCart({ name: 'Producto 1' })} style={buttonStyle}>
-                Agregar al Carrito
-              </button>
-            </li>
-            <li style={listItemStyle}>
-              <span>Producto 2</span>
-              <button onClick={() => addToCart({ name: 'Producto 2' })} style={buttonStyle}>
-                Agregar al Carrito
-              </button>
-            </li>
-            <li style={listItemStyle}>
-              <span>Producto 3</span>
-              <button onClick={() => addToCart({ name: 'Producto 3' })} style={buttonStyle}>
-                Agregar al Carrito
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
+  const [items, setItems] = useState([]);
+
+  const addToCart = (product) => {
+    setItems([...items, product]);
   };
-  
-  export default Cart;
+
+  const removeFromCart = (index) => {
+    const updatedItems = [...items];
+    updatedItems.splice(index, 1);
+    setItems(updatedItems);
+  };
+
+  return (
+    <div className="container mx-auto p-4">
+      <h2 className="text-2xl font-bold mb-4">Carrito de Compras</h2>
+      {items.length === 0 ? (
+        <p>No hay productos en el carrito.</p>
+      ) : (
+        <ul className="list-disc list-inside">
+          {items.map((item, index) => (
+            <li key={index} className="flex justify-between items-center mb-2">
+              <span>{item.name}</span>
+              <button
+                onClick={() => removeFromCart(index)}
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Eliminar
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+      <div className="mt-4">
+        <h3 className="text-xl font-bold mb-2">Productos Disponibles</h3>
+        <ul className="list-disc list-inside">
+          <li className="flex justify-between items-center mb-2">
+            <span>Producto 1</span>
+            <button
+              onClick={() => addToCart({ name: 'Producto 1' })}
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Agregar al Carrito
+            </button>
+          </li>
+          <li className="flex justify-between items-center mb-2">
+            <span>Producto 2</span>
+            <button
+              onClick={() => addToCart({ name: 'Producto 2' })}
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Agregar al Carrito
+            </button>
+          </li>
+          <li className="flex justify-between items-center mb-2">
+            <span>Producto 3</span>
+            <button
+              onClick={() => addToCart({ name: 'Producto 3' })}
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Agregar al Carrito
+            </button>
+          </li>
+          <li className="flex justify-between items-center mb-2">
+            <span>Producto 4</span>
+            <button
+              onClick={() => addToCart({ name: 'Producto 4' })}
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Agregar al Carrito
+            </button>
+          </li>
+          <li className="flex justify-between items-center mb-2">
+            <span>Producto 5</span>
+            <button
+              onClick={() => addToCart({ name: 'Producto 5' })}
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Agregar al Carrito
+            </button>
+          </li>
+          <li className="flex justify-between items-center mb-2">
+            <span>Producto 6</span>
+            <button
+              onClick={() => addToCart({ name: 'Producto 6' })}
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Agregar al Carrito
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Cart;
