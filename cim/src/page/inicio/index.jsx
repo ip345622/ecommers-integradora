@@ -5,7 +5,19 @@ import cacao from '../../assets/img/inicio/cacao.png'
 import cocina from '../../assets/img/inicio/cocina.png'
 import decoraciones from '../../assets/img/inicio/decoraciones.png'
 import brownie from '../../assets/img/inicio/browni.png'
-import macaronFresa from '../../assets/img/inicio/macaron-fresa.png';
+import logoTurin from '../../assets/img/inicio/marcas/logoTurin.png'
+import logoChantilly from '../../assets/img/inicio/marcas/Chantilly.png'
+import logoCallebaut from '../../assets/img/inicio/marcas/Callebaut.png'
+import logoWilton from '../../assets/img/inicio/marcas/wilton.png'
+import logoPuratos from '../../assets/img/inicio/marcas/puratos.png'
+import logoGlorya from '../../assets/img/inicio/marcas/glorya.png'
+import logoMetaltex from '../../assets/img/inicio/marcas/Metaltex.png'
+import productoAzucarGlas from '../../assets/img/inicio/productos/azucarGlas.jpg'
+import productoCremaLyncott from '../../assets/img/inicio/productos/cremaLyncott.jpg'
+import productoCremaRich from '../../assets/img/inicio/productos/cremaRich.jpg'
+import productoManteGloria from '../../assets/img/inicio/productos/manteGloria.jpg'
+import productoChocoCallebaut from '../../assets/img/inicio/productos/chocolateCallebaut.png'
+import productoDuyas from '../../assets/img/inicio/productos/duyas.png'
 const Home = () => {
     return(
         <div>
@@ -74,10 +86,53 @@ const Home = () => {
                         </div>
 
                         <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
-
-                        <div className="">
+                        {/* Marcas */}
+                        <div className="flex">
+                            <div>
+                                <img className="" src={logoTurin} alt="" />
+                            </div>
+                            <div>
+                                <img src={logoChantilly} alt="" />
+                            </div>
+                            <div>
+                                <img src={logoCallebaut} alt="" />
+                            </div>
+                            <div>
+                                <img src={logoWilton} alt="" />
+                            </div>
+                            <div>   
+                                <img src={logoPuratos} alt="" />
+                            </div>
+                            <div>
+                                <img src={logoGlorya} alt="" />
+                            </div>
+                            <div>
+                                <img src={logoMetaltex} alt="" />
+                            </div>
                         </div>
+                        {/* Fin Marcas */}
 
+                        {/* Vista Produstos */}
+                        <div className="flex">
+                            <div>
+                                <img src={productoAzucarGlas} alt="" />
+                            </div>
+                            <div>
+                                <img src={productoCremaLyncott} alt="" />
+                            </div>
+                            <div>
+                                <img src={productoCremaRich} alt="" />
+                            </div>
+                            <div>
+                                <img src={productoManteGloria} alt="" />
+                            </div>
+                            <div>
+                                <img src={productoChocoCallebaut} alt="" />
+                            </div>
+                            <div>
+                                <img src={productoDuyas} alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
