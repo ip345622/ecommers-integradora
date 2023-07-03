@@ -1,6 +1,6 @@
 // import ListadoProductos from "../../components/listadoProductos";
 import { useState } from "react";
-import React from "react";
+
 
 const Cart = () => {
   const [items, setItems] = useState([]);

@@ -1,4 +1,3 @@
-import React from "react";
 import fondo from '../../assets/img/nosotros/fondo.png'
 import mision from '../../assets/img/nosotros/mision.png'
 import vision from '../../assets/img/nosotros/vision.png'
