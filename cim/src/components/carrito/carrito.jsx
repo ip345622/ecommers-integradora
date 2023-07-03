@@ -1,5 +1,5 @@
-import ListadoProductos from "../../components/listadoProductos";
-import { useState, useEffect } from "react";
+// import ListadoProductos from "../../components/listadoProductos";
+import { useState } from "react";
 import React from "react";
 
 const Cart = () => {
