@@ -64,7 +64,7 @@ const Home = () => {
 
                     <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
 
-                    <div>
+                    <div className="">
                         <div className="flex justify-center gap-20 my-20">
                             <div>
                                 <img className="" src={brownie} alt="" />
@@ -84,54 +84,63 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
+                    <div className="flex flex-col gap-16 justify-center items-center mb-16">
+                        <div className="border border-solid border-[#EA8239] mx-96 mb-20"></div>
                         {/* Marcas */}
-                        <div className="flex">
-                            <div>
-                                <img className="" src={logoTurin} alt="" />
+                            <h3 className="text-5xl font-semibold text-[#8F2C02]">Conoce las Marcas con las que Trabajamos</h3>
+                            <div className="grid grid-cols-7 gap-9 items-center justify-center mx-10 my-10">
+                                <div>
+                                    <img className="" src={logoTurin} alt="" />
+                                </div>
+                                <div>
+                                    <img src={logoChantilly} alt="" />
+                                </div>
+                                <div>
+                                    <img src={logoCallebaut} alt="" />
+                                </div>
+                                <div>
+                                    <img src={logoWilton} alt="" />
+                                </div>
+                                <div>   
+                                    <img src={logoPuratos} alt="" />
+                                </div>
+                                <div>
+                                    <img src={logoGlorya} alt="" />
+                                </div>
+                                <div>
+                                    <img src={logoMetaltex} alt="" />
+                                </div>
                             </div>
-                            <div>
-                                <img src={logoChantilly} alt="" />
-                            </div>
-                            <div>
-                                <img src={logoCallebaut} alt="" />
-                            </div>
-                            <div>
-                                <img src={logoWilton} alt="" />
-                            </div>
-                            <div>   
-                                <img src={logoPuratos} alt="" />
-                            </div>
-                            <div>
-                                <img src={logoGlorya} alt="" />
-                            </div>
-                            <div>
-                                <img src={logoMetaltex} alt="" />
-                            </div>
-                        </div>
                         {/* Fin Marcas */}
 
                         {/* Vista Produstos */}
-                        <div className="flex">
-                            <div>
-                                <img src={productoAzucarGlas} alt="" />
+                        <div className="flex flex-col justify-center items-center text-center">
+                            <h3 className="text-5xl font-semibold text-[#8F2C02] my-10">Visita Nuestro Catalago</h3>
+                            <div className="grid grid-cols-6 gap-10 items-center w-5/6 justify-center mt-10">
+                                <div>
+                                    <img src={productoAzucarGlas} alt="" />
+                                </div>
+                                <div>
+                                    <img src={productoCremaLyncott} alt="" />
+                                </div>
+                                <div>
+                                    <img src={productoCremaRich} alt="" />
+                                </div>
+                                <div>
+                                    <img src={productoManteGloria} alt="" />
+                                </div>
+                                <div>
+                                    <img src={productoChocoCallebaut} alt="" />
+                                </div>
+                                <div>
+                                    <img src={productoDuyas} alt="" />
+                                </div>
                             </div>
-                            <div>
-                                <img src={productoCremaLyncott} alt="" />
-                            </div>
-                            <div>
-                                <img src={productoCremaRich} alt="" />
-                            </div>
-                            <div>
-                                <img src={productoManteGloria} alt="" />
-                            </div>
-                            <div>
-                                <img src={productoChocoCallebaut} alt="" />
-                            </div>
-                            <div>
-                                <img src={productoDuyas} alt="" />
-                            </div>
+                        </div>
+                        <div className="">
+                            <button className="bg-[#EA8239] py-3 rounded-lg text-white px-10 hover:bg-black">Ver más Productos</button>
                         </div>
                     </div>
                 </div>
