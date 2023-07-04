@@ -11,7 +11,9 @@ import Mas from './page/mas'
 
 import Navbar from './components/navbar'
 import Footer from './components/footer/footer'
+import Carrito from './components/carrito'
 import './App.css'
+// import { Login } from './components/login'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -28,10 +30,15 @@ const AppRoutes = () => {
 
 function App() {
   const [count, setCount] = useState(0)
+  const [mostrarCarrito, setMostrarCarrito] = useState(false);
 
+  const toggleCarrito = () => {
+    setMostrarCarrito(!mostrarCarrito);
+  };
   return (
     <BrowserRouter>
-      <Navbar />
+       <Navbar toggleCarrito={toggleCarrito} />
+       {mostrarCarrito && <Carrito />}
       <AppRoutes />
       <Footer />
     </BrowserRouter>
