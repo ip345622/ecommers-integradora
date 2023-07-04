@@ -6,7 +6,7 @@ const Us = () => {
     return(
         <section>
             {/* portada */}
-            <div>
+            <div >
                 <img src={fondo} alt="" className="w-full " />
                 <div className="absolute p-2 bg-slate-50 opacity-1 rounded-md ml-[44%] mt-[-14%] w-[17%] h-[5.5%]"></div>
                 <h2 className="decoration-black text-5xl ml-[45%] mt-[-14%] absolute">NOSOTROS</h2>
