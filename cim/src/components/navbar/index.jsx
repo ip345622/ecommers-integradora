@@ -1,11 +1,12 @@
   import { NavLink } from 'react-router-dom'
+  import React from 'react';
 
   import logo from '../../assets/icon/logo-cim.png'
   import signin from '../../assets/icon/user.png'
   import shoppingCart from '../../assets/icon/shopping-cart.png'
 
 
-  const Navbar = () => {
+  const Navbar = ({ toggleCarrito }) => {
     const activeStyle = 'underline underline-offset-4'
 
     return (
@@ -86,25 +87,21 @@
           </li>
           <li>
           <div>
-            <NavLink
-              to='/iniciar-sesion'
-              className={({ isActive }) =>
-                isActive ? activeStyle : undefined
-              }>
-                <img src={signin} alt="" />
-            </NavLink>
-            </div>
+      {/* Resto del código del Navbar */}
+      {/* <div onClick={toggleLogin}>
+        Icono de carrito
+      </div> */}
+        <img src={signin} alt="" className='cursor-pointer'/>
+    </div>
           </li>
           <li>
           <div>
-            <NavLink
-              to='/carrito'
-              className={({ isActive }) =>
-                isActive ? activeStyle : undefined
-              }>
-                <img src={shoppingCart} alt="" />
-            </NavLink>
-            </div>
+      {/* Resto del código del Navbar */}
+      <div onClick={toggleCarrito}>
+        {/* Icono de carrito */}
+        <img src={shoppingCart} alt="" className='cursor-pointer'/>
+      </div>
+    </div>
           </li>
         </ul>
       </nav>
