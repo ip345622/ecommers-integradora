@@ -12,7 +12,6 @@ import Mas from './page/mas'
 import Navbar from './components/navbar'
 import Footer from './components/footer/footer'
 import Carrito from './components/carrito'
-import Login from './components/login'
 import './App.css'
 // import { Login } from './components/login'
 
