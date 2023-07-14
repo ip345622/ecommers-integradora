@@ -6,6 +6,10 @@ import { Slider } from '../../components/sliderProveedores'
 
 
 export default function Products() {
+// const [carrito, setCarrito] = useState([]);
+// const agregarAlCarrito = (producto) => {
+//     setCarrito([...carrito, producto]);
+//   };
 
 
   return (

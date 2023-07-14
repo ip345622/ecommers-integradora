@@ -99,6 +99,15 @@
               {/* <img src={shoppingCart} alt="" className='cursor-pointer'/> */}
             </div>
           </div>
+          <div>
+              <NavLink
+                to='/indexuser'
+                className={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }>
+                  Más
+              </NavLink>
+              </div>
         </nav>
       </div>
     )
