@@ -72,23 +72,21 @@ import shoppingCart from '../../assets/icon/shopping-cart.png'
               </NavLink>
               </div>
             </li>
+
             <li>
-              <div>
-              <NavLink
-                to='/mas'
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }>
-                  Más
-              </NavLink>
-              </div>
+              
             </li>
           </ul>
           <div className='flex ml-36 gap-20'>
-            <div className=''>
-              {/* Resto del código del Navbar */}
-              {/* <img src={signin} alt="" className='cursor-pointer'/> */}
+            <div>
+              <NavLink
+                  to = '/inicioSesion'
+                  className={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+              >
               <a href="#"><box-icon name='user' size='lg' animation='flashing-hover'></box-icon></a>
+              </NavLink>
             </div>
             <div onClick={toggleCarrito}>
               {/* Icono de carrito */}

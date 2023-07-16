@@ -7,7 +7,7 @@ import Productos from './page/productos'
 import Nosotros from './page/nosotros'
 import Recetas from './page/recetas'
 import Ubicaciones from './page/ubicaciones'
-import Mas from './page/mas'
+import Login from './page/inicioSesion'
 
 import Navbar from './components/navbar'
 import Footer from './components/footer/footer'
@@ -22,7 +22,8 @@ const AppRoutes = () => {
     { path: '/nosotros', element: <Nosotros /> },
     { path: '/recetas', element: <Recetas /> },
     { path: '/ubicaciones', element: <Ubicaciones /> },
-    { path: '/mas', element: <Mas /> }
+    { path: '/inicioSesion', element: <Login /> }
+
   ])
 
   return routes
