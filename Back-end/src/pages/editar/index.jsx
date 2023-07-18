@@ -5,7 +5,7 @@ import axios from 'axios';
 const EditarProducto = () => {
   const [productos, setProductos] = useState([]);
   const [editFormData, setEditFormData] = useState({
-    idProducto: '', // Changed the name of the property to match the form field name
+    idProducto: '',
     nombreProducto: '',
     descripcion: '',
     precio: '',
@@ -34,12 +34,12 @@ const EditarProducto = () => {
   const handleEditFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const id   = editFormData.idProducto; // Store the ID value
-      delete editFormData.idProducto; // Remove the ID property from the form data
-      await axios.put(`http://localhost:3000/api/productos/${id}`, editFormData);
+      const id   = editFormData.idProducto; 
+      delete editFormData.idProducto; 
+      await axios.put(`http://localhost:3000/api/productos/${id}`);
       fetchProductos();
       setEditFormData({
-        idProducto: '', // Clear the ID field as well
+        idProducto: '',
         nombreProducto: '',
         descripcion: '',
         precio: '',

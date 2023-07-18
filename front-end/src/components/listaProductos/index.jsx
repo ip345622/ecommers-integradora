@@ -8,6 +8,13 @@ import axios from 'axios';
 
 export const ListaProductos = () =>{
     const [productos, setProductos] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
+
+    const addToCart = (product) => {
+      setCartItems([...cartItems, product]);
+    };
+
+    
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -22,16 +29,20 @@ export const ListaProductos = () =>{
       }, []);
       
       return (
-        <div>
+        <div className='w-full '>
+          <div className='grid grid-cols-4 ml-[5%]'>
           {productos.map((producto) => (
-            <div key={producto.idProducto}>
-              <h3>{producto.nombreProducto}</h3>
-              <img src={estrella} alt={producto.nombreProducto} />
+            <div key={producto.idProducto} className='mb-10'>
+              <img src={estrella} alt={producto.nombreProducto} className='w-[60%]' />
+              <h3 className='text-2xl font-bold'>{producto.nombreProducto}</h3>
               <p>{producto.descripcion}</p>
               <p>Existencia: {producto.existencia}</p>
               <p>Precio: {producto.precio}</p>
+              <button className='bg-orange-500 rounded-2xl pl-3 pr-3' onClick={() => addToCart(producto)}>Agregar al carrito</button>
+
             </div>
           ))}
+        </div>
         </div>
       );
       
