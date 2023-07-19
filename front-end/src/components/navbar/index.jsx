@@ -6,7 +6,7 @@ import logo from '../../assets/icon/logo-cim.png'
     return (
       <div className='w-full'>
         <nav className='flex justify-center items-center z-10 text-lg border-b-4 font-light max-h-28'>
-          <ul className='flex items-center justify-center gap-20 font-medium ml-72'>
+          <ul className=' items-center justify-center gap-20 font-medium ml-72'>
             <li className='text-lg font-medium'>
               <div className=''>
               <NavLink to='/'>
