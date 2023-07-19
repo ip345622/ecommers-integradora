@@ -1,52 +1,147 @@
+import { Fragment, useState, useEffect } from 'react'
+import axios from 'axios'
+import { Dialog, Transition } from '@headlessui/react'
+// import { XMarkIcon } from '@heroicons/react/24/outline'
+export default function carrito({producto}) {
+  const [open, setOpen] = useState(true)
+  const [productos, setProductos] = useState([]);
+  // const [selectedProduct, setSelectedProduct] = useState(null);
 
-import chocolate from '../../assets/img/carrito/chocolate.png'
-import domo from '../../assets/img/carrito/domo.png'
-import { BsFillPatchMinusFill,BsFillPatchPlusFill,BsFillTrashFill } from "react-icons/bs";
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/api/productos');
+        setProductos(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-const Cart = () => {
-  
+    fetchData();
+  }, []);
 
   return (
-    <div className="w-[40%] mt-[-3px] ml-[60%] z-10 h-auto  absolute bg-white">
-      {/* producto lista */}
-      <h1 className='text-center font-bold text-3xl m-1'>Productos agregados</h1>
-      <div>
-        {/* contenedor */}
-      <div className="flex justify-evenly border-orange-500 border-2 bg-white">
-        <img src={chocolate} alt="" className='ml-2' />
-        <p>Chocolate Amargo Callebaut 400g</p>
-        {/* botones agregar o quitar cantidad */}
-        <div className='flex justify-between w-[14%] absolute mt-9 ml-[20%] '>
-        <BsFillPatchMinusFill className=' w-7 h-7 m-auto flex justify-center font-bold rounded-lg text-orange-500'/>
-          <p className='m-auto p-2 '>2</p>
-          <BsFillPatchPlusFill className='w-7 h-7 m-auto flex justify-center font-bold rounded-lg text-orange-500'/>
-        </div>
-        <p className=''>Total: $<span>350</span></p>
-        <BsFillTrashFill className='text-5xl items-center mt-5  border-2 border-l-orange-500 mr-[-10%]' />
-      </div>
-      {/* producto 2 */}
-      <div className="flex justify-evenly border-orange-500 border-2 mt-2 bg-white">
-        <img src={domo} alt="" className='ml-2'/>
-        <p>domo de 32</p>
-        {/* botones agregar o quitar cantidad */}
-        <div className='flex justify-between w-[16%] absolute mt-9 ml-[43%] '>
-          {/* <button className='bg-orange-500 w-7 h-7  flex justify-center font-bold '>X</button> */}
-          <BsFillPatchMinusFill className=' w-7 h-7 m-auto flex justify-center text-orange-500'/>
-          <p className='m-auto p-2 '>2</p>
-          <BsFillPatchPlusFill className='w-7 h-7 m-auto flex justify-center font-bold rounded-lg text-orange-500'/>
-        </div>
-        <p className=''>Total: <span>$350</span></p>
-        <BsFillTrashFill className='text-5xl items-center mt-5 mr-[-14%] border-2 border-l-orange-500' />
+    <Transition.Root show={open} as={Fragment}>
+      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-in-out duration-500"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in-out duration-500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        </Transition.Child>
 
-      </div>
-      </div>
-     {/* comprar */}
-     <div className=' flex flex-col items-center m-3'>
-     <p className='flex justify-evenly m-1'>Total a pagar: <span>$777</span></p>
-      <button className='rounded-sm bg-orange-400  w-[15%]'>comprar</button>
-     </div>
-    </div>
-  );
-};
+        <div className="fixed inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+              <Transition.Child
+                as={Fragment}
+                enter="transform transition ease-in-out duration-500 sm:duration-700"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="transform transition ease-in-out duration-500 sm:duration-700"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full"
+              >
+                <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                    <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                      <div className="flex items-start justify-between">
+                        <Dialog.Title className="text-lg font-medium text-gray-900">Shopping cart</Dialog.Title>
+                        <div className="ml-3 flex h-7 items-center">
+                          <button
+                            type="button"
+                            className="-m-2 p-2 text-gray-400 hover:text-gray-500"
+                            onClick={() => setOpen(false)}
+                          >
+                            <span className="sr-only">Close panel</span>
+                            <button  className="h-6 w-6 text-4xl">X</button>
+                          </button>
+                        </div>
+                      </div>
 
-export default Cart;
+                      <div className="mt-8">
+                        <div className="flow-root">
+                          <ul role="list" className="-my-6 divide-y divide-gray-200">
+                            {productos.map((producto) => (
+                              <li key={producto.idProducto} className="flex py-6">
+                                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                  <img
+                                    src={`http://localhost/images/${producto.nombreImg}`}
+                                    alt={producto.nombreImg}
+                                    className="h-full w-full object-cover object-center"
+                                  />
+                                </div>
+
+                                <div className="ml-4 flex flex-1 flex-col">
+                                  <div>
+                                    <div className="flex justify-between text-base font-medium text-gray-900">
+                                      <h3>
+                                        <a href={producto.href}>{producto.nombreProducto}</a>
+                                      </h3>
+                                      <p className="ml-4">{producto.precio}</p>
+                                    </div>
+                                    <p className="mt-1 text-sm text-gray-500">{producto.descripcion}</p>
+                                  </div>
+                                  <div className="flex flex-1 items-end justify-between text-sm">
+                                    <p className="text-gray-500">Qty {producto.quantity}</p>
+
+                                    <div className="flex">
+                                      <button
+                                        type="button"
+                                        className="font-medium text-indigo-600 hover:text-indigo-500"
+                                      >
+                                        Remove
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+                      <div className="flex justify-between text-base font-medium text-gray-900">
+                        <p>Subtotal</p>
+                        <p>$262.00</p>
+                      </div>
+                      <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                      <div className="mt-6">
+                        <a
+                          href="#"
+                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                        >
+                          Checkout
+                        </a>
+                      </div>
+                      <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                        <p>
+                          or
+                          <button
+                            type="button"
+                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                            onClick={() => setOpen(false)}
+                          >
+                            Continue Shopping
+                            <span aria-hidden="true"> &rarr;</span>
+                          </button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </div>
+      </Dialog>
+    </Transition.Root>
+  )
+}

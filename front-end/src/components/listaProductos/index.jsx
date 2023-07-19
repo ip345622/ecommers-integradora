@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import ProductoDetalle from '../detallesproductos';
+import Example from '../detallesproductos'
 import axios from 'axios';
 
 export const ListaProductos = () => {
   const [productos, setProductos] = useState([]);
-  const [carrito, setCarrito] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  // const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,48 +28,36 @@ export const ListaProductos = () => {
     setSelectedProduct(null);
   };
 
-  const agregarAlCarrito = (product) => {
-    setCarrito([...carrito, product]);
-  };
+  // const handleClickAgregarAlCarrito = (producto) => {
+  //   agregarAlCarrito(producto);
+  // };
 
-  const eliminarDelCarrito = (product) => {
-    const updatedCarrito = carrito.filter((item) => item.idProducto !== product.idProducto);
-    setCarrito(updatedCarrito);
-  };
 
   return (
-    <div className='w-full'>
-      <div className='grid grid-cols-4 ml-[5%]'>
-        {productos.map((producto) => (
-          <div key={producto.idProducto} className='mb-10'>
-            <img src={`http://localhost/images/${producto.nombreImg}`} alt={producto.nombreProducto} className='w-[60%]' onClick={() => handleClick(producto)} />
-            <h3 className='text-2xl font-bold'>{producto.nombreProducto}</h3>
-            <p>{producto.descripcion}</p>
-            <p>Existencia: {producto.existencia}</p>
-            <p>Precio: {producto.precio}</p>
-            <button className='bg-orange-500 rounded-2xl pl-3 pr-3' onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button>
-          </div>
-        ))}
-      </div>
+    <div className="bg-white">
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 className="sr-only">Products</h2>
 
-      {selectedProduct && (
-        <ProductoDetalle product={selectedProduct} onClose={cerrarDetalle} />
-      )}
-      <div>
-        <h2>Carrito de compras</h2>
-        {carrito.length === 0 ? (
-          <p>No hay productos en el carrito.</p>
-        ) : (
-          carrito.map((product) => (
-            <div key={product.idProducto}>
-              <h3>{product.nombreProducto}</h3>
-              <p>Precio: {product.precio}</p>
-              <button onClick={() => eliminarDelCarrito(product)}>Eliminar</button>
-            </div>
-          ))
-        )}
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          {productos.map((producto) => (
+            <a key={producto.idProducto} href={producto.href} className="group">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                <img
+                  src={`http://localhost/images/${producto.nombreImg}`}
+                  alt={producto.imageAlt} onClick={() => handleClick(producto)}
+                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                />
+              </div>
+              <h3 className="mt-4 text-sm text-gray-700">{producto.nombreProducto}</h3>
+              <p className="mt-1 text-lg font-medium text-gray-900">{producto.precio}</p>
+              <button className='w-full object-cover object-center group-hover:opacity-75 bg-gray-700' >añadir</button>
+            </a>
+          ))}
+        </div>
+        {selectedProduct && (
+          <Example product={selectedProduct} onClose={cerrarDetalle} />
+          )}
       </div>
-      
-    </div>
+    </div> 
   );
 };

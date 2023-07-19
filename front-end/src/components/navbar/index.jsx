@@ -1,8 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import React from 'react';
 import logo from '../../assets/icon/logo-cim.png'
-import signin from '../../assets/icon/user.png'
-import shoppingCart from '../../assets/icon/shopping-cart.png'
   const Navbar = ({ toggleCarrito }) => {
     const activeStyle = 'underline underline-offset-4'
 
