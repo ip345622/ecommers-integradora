@@ -1,4 +1,5 @@
-import React from "react";
+import { SliderIni } from '../../components/sliderInicio';
+
 import chcocoCalebaut from '../../assets/img/inicio/chocolateBallebaut.png';
 import logoCim from '../../assets/icon/logo-cim.png'
 import cacao from '../../assets/img/inicio/cacao.png'
@@ -21,8 +22,8 @@ import productoDuyas from '../../assets/img/inicio/productos/duyas.png'
 const Home = () => {
     return(
         <div>
-            <div className="relative w-full h-full">
-                <img className="w-full h-full object-cover top-0 left-0" src={chcocoCalebaut} alt="" />
+            <div className="m-0">
+                <SliderIni></SliderIni>
             </div>
 
             <div>
