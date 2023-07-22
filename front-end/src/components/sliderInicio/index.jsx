@@ -3,8 +3,7 @@ import {BsChevronCompactLeft,BsChevronCompactRight} from 'react-icons/bs'
 import {RxDotFilled} from 'react-icons/rx'
 
 import bnCalle from '../../assets/img/sliderInicio/bnCalle.png'
-import decorados from '../../assets/img/sliderInicio/decorados.png'
-import pastelitos from '../../assets/img/sliderInicio/pasttelitosFresa.png'
+import cupk from '../../assets/img/sliderInicio/cupk.png'
 
 
 export const SliderIni = () => {
@@ -13,10 +12,7 @@ export const SliderIni = () => {
           img: bnCalle
         },
         {
-          img: decorados
-        },
-        {
-          img:pastelitos
+          img: cupk
         }
       ];
     
@@ -47,26 +43,26 @@ export const SliderIni = () => {
       }
 
       return(
-        <section className='h-[40rem] w-auto m-auto relative group'>
-        <div
-          style={{ backgroundImage: `url(${slides[currentIndex].img})` }}
-          className="w-full h-full rounded-2xl bg-no-repeat bg-contain bg-center duration-500"></div>
-          {/* flecha derecha */}
-          <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-            <BsChevronCompactLeft onClick={prevSlide} size={30}/>
+        <section className='max-[1700px]:hidden h-[37rem] w-auto m-auto relative group'>
+          <div
+            style={{ backgroundImage: `url(${slides[currentIndex].img})` }}
+            className="w-full h-full bg-no-repeat bg-[length:1890px_700px] bg-center duration-500"></div>
+            {/* flecha derecha */}
+            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+              <BsChevronCompactLeft onClick={prevSlide} size={30}/>
+            </div>
+            {/* flecha izquierda */}
+            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+              <BsChevronCompactRight onClick={nextSlide} size={30}/>
+            </div>
+            <div className='flex top-4 justify-center py-2'>
+              {slides.map((slide,slideIndex) => (
+                <div key={slideIndex} onClick={() =>goToSlide(slideIndex)} className=' text-2xl cursor-pointer'>
+                  <RxDotFilled />
+            </div>
+              ))}
           </div>
-          {/* flecha izquierda */}
-          <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-            <BsChevronCompactRight onClick={nextSlide} size={30}/>
-          </div>
-          <div className='flex top-4 justify-center py-2'>
-            {slides.map((slide,slideIndex) => (
-              <div key={slideIndex} onClick={() =>goToSlide(slideIndex)} className=' text-2xl cursor-pointer'>
-                <RxDotFilled />
-          </div>
-            ))}
-        </div>
-      </section>
+        </section>
       )
 
 }

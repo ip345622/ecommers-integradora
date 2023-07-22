@@ -32,8 +32,8 @@ const Home = () => {
                         <h2 className="text-5xl">Bienvenido a</h2>
                         <img src={logoCim} alt="" />
                     </div>
-                    <div className="flex justify-center items-center mx-30 text-center">
-                        <p className="text-lg">
+                    <div className="flex justify-center items-center lg:mx-30 text-center">
+                        <p className="text-lg w-[70%]">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
                             Cupiditate repudiandae voluptates possimus vero culpa quod libero corrupti rerum! Voluptas nisi, 
                             sequi eaque ipsam aliquam suscipit. <br />
@@ -43,45 +43,48 @@ const Home = () => {
                 </div>
                 <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
                 <div>
-                    <h3 className="text-[#EA8239] mb-10 ml-28 text-2xl font-semibold">Lo que necesitas para tus platillos</h3>
-                    <div className="grid grid-flow-col items-center justify-evenly">
+                    <h3 className="text-[#EA8239] text-center mb-10 text-3xl font-semibold">Lo que necesitas para tus platillos</h3>
+                    <div className="grid lg:grid-flow-col items-center justify-evenly gap-y-5">
 
-                        <div className="flex items-center justify-center">
+                        <div className="flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             <p className="absolute text-white text-3xl">Chocolates</p>
-                            <img className="" src={cacao} alt="imagenCacao" />
+                            <img className="w-auto" src={cacao} alt="imagenCacao" />
                         </div>
-                        <div className="flex items-center justify-center">
+                        <div className="flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             <p className="absolute text-white text-3xl">Cocina</p>
                             <img src={cocina} alt="imagenCacao" />
                         </div>
-                        <div className="flex items-center justify-center">
+                        <div className="flex items-center justify-center mg:col-span-3 lg:col-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             <p className="absolute text-white text-3xl">Decoraciones</p>
                             <img  src={decoraciones} alt="imagenCacao" />
                         </div>
                     </div>
                     <div className="flex justify-center my-10">
-                        <button className="bg-[#EA8239] p-3 rounded-md text-white font-medium text-lg">Mas Productos</button>
+                        <a href="/productos"><button className="bg-[#EA8239] p-3 px-24 rounded-md text-white font-medium text-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Mas Productos</button></a>
                     </div>
 
                     <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
 
                     <div className="">
-                        <div className="flex justify-center gap-20 my-20">
+                        <div className="flex-col flex justify-center items-center lg:gap-16 lg:my-20">
                             <div>
-                                <img className="" src={brownie} alt="" />
+                                <h3 className="text-[#EA8239] text-center mb- text-3xl font-semibold">¿Buscas recetas? Te dejamos una</h3>
                             </div>
-                            <div className="">
-                                <h3 className="text-center text-3xl">Receta de Brownie</h3>
-                                <p className="text-center my-5 text-2xl">Deja a todos encantados con estos deliciosos Brownies  y solo necesitas: {''}</p>
-                                <ul className="list-disc list-outside my-5 text-xl">
-                                    <li className="p-2">1/2 taza harina para hornear</li>
-                                    <li className="p-2">1/8 cucharadita de sal</li>
-                                    <li className="p-2">170gr chocolate semiamargo confitier Turin</li>
-                                    <li className="p-2">170gr de mantequilla sin sal a temperatura ambiente</li>
-                                    <li className="p-2">3 huevos a temperatura ambiente</li>
-                                </ul>
-                                <div className="flex justify-center my-10">
-                                    <button className="bg-[#EA8239] text-2xl text-white rounded-md py-3 px-10">Receta</button>
+                            <h3 className="text-center text-3xl py- font-semibold">Receta de Brownie</h3>
+                            <div className='lg:flex items-center'>
+                                <img className="scale-75 lg:scale-100" src={brownie} alt="" />
+                                <div className="">
+                                    <p className="lg:text-center ml-12 lg:m-0 my-5 text-2xl w-[85%]">Deja a todos encantados con estos deliciosos Brownies  y solo necesitas:</p>
+                                    <ul className="list-disc list-outside my-5 text-xl ml-12">
+                                        <li className="p-2">1/2 taza harina para hornear</li>
+                                        <li className="p-2">1/8 cucharadita de sal</li>
+                                        <li className="p-2">170gr chocolate semiamargo confitier Turin</li>
+                                        <li className="p-2">170gr de mantequilla sin sal a temperatura ambiente</li>
+                                        <li className="p-2">3 huevos a temperatura ambiente</li>
+                                    </ul>
+                                    <div className="flex justify-center my-10">
+                                        <a href="/recetas"><button className="bg-[#EA8239] p-3 px-24 rounded-md text-white font-medium text-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Saber más</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -90,8 +93,8 @@ const Home = () => {
                     <div className="flex flex-col gap-16 justify-center items-center mb-16">
                         <div className="border border-solid border-[#EA8239] mx-96 mb-20"></div>
                         {/* Marcas */}
-                            <h3 className="text-5xl font-semibold text-[#8F2C02]">Conoce las Marcas con las que Trabajamos</h3>
-                            <div className="grid grid-cols-7 gap-9 items-center justify-center mx-10 my-10">
+                            <h3 className="text-5xl font-semibold text-[#8F2C02] text-center w-[75%] lg:w-auto">Trabajamos con las mejores marcas</h3>
+                            <div className="grid grid-cols-3 lg:grid-cols-7 gap-9 items-center justify-center mx-10 my-10">
                                 <div>
                                     <img className="" src={logoTurin} alt="" />
                                 </div>
@@ -115,34 +118,6 @@ const Home = () => {
                                 </div>
                             </div>
                         {/* Fin Marcas */}
-
-                        {/* Vista Produstos */}
-                        <div className="flex flex-col justify-center items-center text-center">
-                            <h3 className="text-5xl font-semibold text-[#8F2C02] my-10">Visita Nuestro Catalago</h3>
-                            <div className="grid grid-cols-6 gap-10 items-center w-5/6 justify-center mt-10">
-                                <div>
-                                    <img src={productoAzucarGlas} alt="" />
-                                </div>
-                                <div>
-                                    <img src={productoCremaLyncott} alt="" />
-                                </div>
-                                <div>
-                                    <img src={productoCremaRich} alt="" />
-                                </div>
-                                <div>
-                                    <img src={productoManteGloria} alt="" />
-                                </div>
-                                <div>
-                                    <img src={productoChocoCallebaut} alt="" />
-                                </div>
-                                <div>
-                                    <img src={productoDuyas} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="">
-                            <button className="bg-[#EA8239] py-3 rounded-lg text-white px-10 hover:bg-black">Ver más Productos</button>
-                        </div>
                     </div>
                 </div>
             </div>
