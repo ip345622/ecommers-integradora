@@ -30,7 +30,6 @@ const AppRoutes = () => {
 }
 
 function App() {
-  const [count, setCount] = useState(0)
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
 
   const toggleCarrito = () => {
