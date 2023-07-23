@@ -9,24 +9,24 @@ import logo from '../../assets/icon/logo-cim.png'
           <ul className=' grid md:grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:grid lg:grid-cols-1 grid-col items-center justify-center lg:gap-x-44 lg:gap-y-6 font-medium lg:ml-72'>
             <li className='lg:col-span-6 flex justify-center md:col-span-2 px-48'>
               <div>
-              <NavLink
-                to='/'
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }>
-                <img src={logo} alt="" />
-              </NavLink>
+                <NavLink
+                  to='/'
+                  className={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }>
+                  <img src={logo} alt="" />
+                </NavLink>
               </div>
             </li>
             <li className='md:col-span-2 col-auto'>
-              <div className =''>
+              <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#8F2C02]'>
               <NavLink to='/'>
                 Inicio
               </NavLink>
               </div>
             </li>
             <li className=''>
-              <div>
+              <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#8F2C02]'>
               <NavLink
                 to='/nosotros'
                 className={({ isActive }) =>
@@ -37,7 +37,7 @@ import logo from '../../assets/icon/logo-cim.png'
               </div>
             </li>
             <li>
-              <div>
+              <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#8F2C02]'>
               <NavLink
                 to='/productos'
                 className={({ isActive }) =>
@@ -49,7 +49,7 @@ import logo from '../../assets/icon/logo-cim.png'
             </li>
            
             <li>
-              <div>
+              <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#8F2C02]'>
               <NavLink
                 to='/recetas'
                 className={({ isActive }) =>
@@ -60,7 +60,7 @@ import logo from '../../assets/icon/logo-cim.png'
               </div>
             </li>
             <li>
-              <div>
+              <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#8F2C02]'>
               <NavLink
                 to='/ubicaciones'
                 className={({ isActive }) =>
@@ -76,17 +76,17 @@ import logo from '../../assets/icon/logo-cim.png'
             </li>
           </ul>
           <div className='flex justify-center lg:ml-36 gap-20 md:pb-5'>
-            <div>
+            <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
               <NavLink
                   to = '/inicioSesion'
                   className={({ isActive }) =>
                   isActive ? activeStyle : undefined
                 }
               >
-              <a href="#"><box-icon name='user' size='lg' animation='flashing-hover'></box-icon></a>
+              <a href="#" className=''><box-icon name='user' size='lg'></box-icon></a>
               </NavLink>
             </div>
-            <div onClick={toggleCarrito}>
+            <div onClick={toggleCarrito} className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
               {/* Icono de carrito */}
               <a href="#"><box-icon name='cart' size='lg'></box-icon></a>
               {/* <img src={shoppingCart} alt="" className='cursor-pointer'/> */}

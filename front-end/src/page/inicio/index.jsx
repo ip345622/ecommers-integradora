@@ -54,7 +54,7 @@ const Home = () => {
                             <p className="absolute text-white text-3xl">Cocina</p>
                             <img src={cocina} alt="imagenCacao" />
                         </div>
-                        <div className="flex items-center justify-center mg:col-span-3 lg:col-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                        <div className="flex items-center justify-center md:col-span-3 lg:col-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             <p className="absolute text-white text-3xl">Decoraciones</p>
                             <img  src={decoraciones} alt="imagenCacao" />
                         </div>
@@ -72,7 +72,7 @@ const Home = () => {
                             </div>
                             <h3 className="text-center text-3xl py- font-semibold">Receta de Brownie</h3>
                             <div className='lg:flex items-center'>
-                                <img className="scale-75 lg:scale-100" src={brownie} alt="" />
+                                <img className="ml-16 lg:ml-0 scale-75 lg:scale-100" src={brownie} alt="" />
                                 <div className="">
                                     <p className="lg:text-center ml-12 lg:m-0 my-5 text-2xl w-[85%]">Deja a todos encantados con estos deliciosos Brownies  y solo necesitas:</p>
                                     <ul className="list-disc list-outside my-5 text-xl ml-12">

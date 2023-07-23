@@ -1,4 +1,4 @@
-import fondo from '../../assets/img/nosotros/fondo.png'
+import fondo from '../../assets/img/nosotros/fond.png'
 import mision from '../../assets/img/nosotros/mision.png'
 import vision from '../../assets/img/nosotros/vision.png'
 
@@ -6,9 +6,9 @@ const Us = () => {
     return(
         <section>
             {/* portada */}
-            <div >
-                <img src={fondo} alt="" className="w-full " />
-                <h2 className="decoration-black text-5xl ml-[45%] mt-[-13%] absolute bg-white rounded-lg pl-8 pr-8">NOSOTROS</h2>
+            <div className='flex' >
+                <img src={fondo} alt="" className="bg-fixed w-full h-[40vh] bg-center bg-cover relative bg-clip-border bg-no-repeat" />
+                <h2 className="text-white text-7xl rounded-lg pl-8 pr-8 absolute text-center ml-[41%] mt-[7%]">Nosotros</h2>
                 
             </div>
             {/* cuerpo */}
