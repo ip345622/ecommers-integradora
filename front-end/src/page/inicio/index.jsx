@@ -13,12 +13,7 @@ import logoWilton from '../../assets/img/inicio/marcas/wilton.png'
 import logoPuratos from '../../assets/img/inicio/marcas/puratos.png'
 import logoGlorya from '../../assets/img/inicio/marcas/glorya.png'
 import logoMetaltex from '../../assets/img/inicio/marcas/Metaltex.png'
-import productoAzucarGlas from '../../assets/img/inicio/productos/azucarGlas.jpg'
-import productoCremaLyncott from '../../assets/img/inicio/productos/cremaLyncott.jpg'
-import productoCremaRich from '../../assets/img/inicio/productos/cremaRich.jpg'
-import productoManteGloria from '../../assets/img/inicio/productos/manteGloria.jpg'
-import productoChocoCallebaut from '../../assets/img/inicio/productos/chocolateCallebaut.png'
-import productoDuyas from '../../assets/img/inicio/productos/duyas.png'
+
 const Home = () => {
     return(
         <div>
@@ -28,7 +23,7 @@ const Home = () => {
 
             <div>
                 <div className="mb-10 mt-10">
-                    <div className="flex justify-center items-center">
+                    <div className="flex max-md:flex-col justify-center items-center">
                         <h2 className="text-5xl">Bienvenido a</h2>
                         <img src={logoCim} alt="" />
                     </div>
@@ -47,20 +42,20 @@ const Home = () => {
                     <div className="grid lg:grid-flow-col items-center justify-evenly gap-y-5">
 
                         <div className="flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                            <p className="absolute text-white text-3xl">Chocolates</p>
+                            <p className="absolute text-white text-4xl">Chocolates</p>
                             <img className="w-auto" src={cacao} alt="imagenCacao" />
                         </div>
                         <div className="flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                            <p className="absolute text-white text-3xl">Cocina</p>
+                            <p className="absolute text-white text-4xl">Cocina</p>
                             <img src={cocina} alt="imagenCacao" />
                         </div>
                         <div className="flex items-center justify-center md:col-span-3 lg:col-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                            <p className="absolute text-white text-3xl">Decoraciones</p>
+                            <p className="absolute text-white text-4xl">Decoraciones</p>
                             <img  src={decoraciones} alt="imagenCacao" />
                         </div>
                     </div>
                     <div className="flex justify-center my-10">
-                        <a href="/productos"><button className="bg-[#EA8239] p-3 px-24 rounded-md text-white font-medium text-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Mas Productos</button></a>
+                        <a href="/productos"><button className="bg-[#EA8239] p-3 px-24 rounded-md text-white font-medium text-3xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Mas Productos</button></a>
                     </div>
 
                     <div className="border border-solid border-[#EA8239] mx-96 my-20"></div>
@@ -68,14 +63,14 @@ const Home = () => {
                     <div className="">
                         <div className="flex-col flex justify-center items-center lg:gap-16 lg:my-20">
                             <div>
-                                <h3 className="text-[#EA8239] text-center mb- text-3xl font-semibold">¿Buscas recetas? Te dejamos una</h3>
+                                <h3 className="text-[#EA8239] text-center mb- text-[2.5rem] font-semibold">¿Buscas recetas? Te dejamos una</h3>
                             </div>
-                            <h3 className="text-center text-3xl py- font-semibold">Receta de Brownie</h3>
+                            <h3 className="text-center text-4xl py- font-semibold">Receta de Brownie</h3>
                             <div className='lg:flex items-center'>
-                                <img className="ml-16 lg:ml-0 scale-75 lg:scale-100" src={brownie} alt="" />
+                                <img className="md:ml-16 lg:ml-0 scale-75 lg:scale-100" src={brownie} alt="" />
                                 <div className="">
-                                    <p className="lg:text-center ml-12 lg:m-0 my-5 text-2xl w-[85%]">Deja a todos encantados con estos deliciosos Brownies  y solo necesitas:</p>
-                                    <ul className="list-disc list-outside my-5 text-xl ml-12">
+                                    <p className="lg:text-center ml-12 lg:m-0 my-5 text-3xl w-[85%]">Deja a todos encantados con estos deliciosos Brownies  y solo necesitas:</p>
+                                    <ul className="list-disc list-outside my-5 text-2xl ml-12">
                                         <li className="p-2">1/2 taza harina para hornear</li>
                                         <li className="p-2">1/8 cucharadita de sal</li>
                                         <li className="p-2">170gr chocolate semiamargo confitier Turin</li>
@@ -83,7 +78,7 @@ const Home = () => {
                                         <li className="p-2">3 huevos a temperatura ambiente</li>
                                     </ul>
                                     <div className="flex justify-center my-10">
-                                        <a href="/recetas"><button className="bg-[#EA8239] p-3 px-24 rounded-md text-white font-medium text-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Saber más</button></a>
+                                        <a href="/recetas"><button className="bg-[#EA8239] p-3 px-24 rounded-md text-white font-medium text-3xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Saber más</button></a>
                                     </div>
                                 </div>
                             </div>
