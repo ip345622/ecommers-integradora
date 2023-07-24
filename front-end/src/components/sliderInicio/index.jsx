@@ -50,7 +50,7 @@ export const SliderIni = () => {
       }
 
       return(
-        <section className='max-[1700px]:hidden h-[37rem] w-auto m-auto relative group'>
+        <section className='max-[1700px]:hidden h-[37rem] w-auto m-auto relative group bg-gradient-to-t from-[#ef904d] to-[#8F2C02] py-5'>
           <div
             style={{ backgroundImage:`url(${slides[currentIndex].img})` }}
             className="w-full h-full bg-contain bg-no-repeat bg-center duration-500 scale-100"></div>
