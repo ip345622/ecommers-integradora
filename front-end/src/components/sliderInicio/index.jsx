@@ -2,17 +2,24 @@ import { useState, useEffect } from 'react'
 import {BsChevronCompactLeft,BsChevronCompactRight} from 'react-icons/bs'
 import {RxDotFilled} from 'react-icons/rx'
 
-import bnCalle from '../../assets/img/sliderInicio/bnCalle.png'
-import cupk from '../../assets/img/sliderInicio/cupk.png'
-
+import bg1 from '../../assets/img/sliderInicio/bg1.jpg'
+import bg2 from '../../assets/img/sliderInicio/bg2.jpg'
+import bg3 from '../../assets/img/sliderInicio/bg3.jpg'
+import bg4 from '../../assets/img/sliderInicio/bg4.jpg'
 
 export const SliderIni = () => {
     const slides =[
         {
-          img: bnCalle
+          img: bg1
         },
         {
-          img: cupk
+          img: bg2
+        },
+        {
+          img: bg3
+        },
+        {
+          img: bg4
         }
       ];
     
@@ -45,8 +52,8 @@ export const SliderIni = () => {
       return(
         <section className='max-[1700px]:hidden h-[37rem] w-auto m-auto relative group'>
           <div
-            style={{ backgroundImage: `url(${slides[currentIndex].img})` }}
-            className="w-full h-full bg-no-repeat bg-[length:1890px_700px] bg-center duration-500"></div>
+            style={{ backgroundImage:`url(${slides[currentIndex].img})` }}
+            className="w-full h-full bg-contain bg-no-repeat bg-center duration-500 scale-100"></div>
             {/* flecha derecha */}
             <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
               <BsChevronCompactLeft onClick={prevSlide} size={30}/>
