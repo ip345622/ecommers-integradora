@@ -37,8 +37,8 @@ function App() {
   };
   return (
     <BrowserRouter>
-       <Navbar toggleCarrito={toggleCarrito} />
-       {mostrarCarrito && <Carrito />}
+      <Navbar toggleCarrito={toggleCarrito} />
+      {mostrarCarrito && <Carrito />}
       <AppRoutes />
       <Footer />
     </BrowserRouter>

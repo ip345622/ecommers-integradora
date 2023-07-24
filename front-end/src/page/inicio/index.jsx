@@ -17,6 +17,9 @@ import logoMetaltex from '../../assets/img/inicio/marcas/Metaltex.png'
 const Home = () => {
     return(
         <div>
+            <div>
+
+            </div>
             <div className="m-0">
                 <SliderIni></SliderIni>
             </div>

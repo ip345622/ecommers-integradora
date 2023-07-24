@@ -2,13 +2,12 @@ import { NavLink } from 'react-router-dom'
 import logo from '../../assets/icon/logo-cim.png'
   const Navbar = ({ toggleCarrito }) => {
     const activeStyle = 'underline underline-offset-4'
-
     return (
       <div className='w-full'>
         <nav className='md:grid lg:flex justify-center items-center z-10 text-xl border-b-4 font-light max-h-auto text-center gap-y-5'>
-          <ul className=' grid md:grid md:grid-cols-2 gap-y-8 md:gap-x-8 lg:grid lg:grid-cols-1 grid-col items-center justify-center lg:gap-x-44 lg:gap-y-6 font-medium lg:ml-72'>
+          <ul className='grid grid-cols-2 gap-y-8 md:gap-x-8 lg:grid lg:grid-cols-1 grid-col items-center justify-center lg:gap-x-44 lg:gap-y-6 font-medium lg:ml-72'>
             <li className='lg:col-span-6 flex justify-center md:col-span-2 px-48'>
-              <div>
+              <div className=''>
                 <NavLink
                   to='/'
                   className={({ isActive }) =>
@@ -18,7 +17,7 @@ import logo from '../../assets/icon/logo-cim.png'
                 </NavLink>
               </div>
             </li>
-            <li className='md:col-span-2 col-auto'>
+            <li className='col-span-2 lg:col-auto'>
               <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#8F2C02]'>
               <NavLink to='/'>
                 Inicio
