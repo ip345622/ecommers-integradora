@@ -8,6 +8,10 @@ import Nosotros from './page/nosotros'
 import Recetas from './page/recetas'
 import Ubicaciones from './page/ubicaciones'
 import Login from './page/inicioSesion'
+import Brownie from './page/recetas/Brownie'
+import Galletas from './page/recetas/Galletas'
+import Ganache from './page/recetas/Ganache'
+
 
 import Navbar from './components/navbar'
 import Footer from './components/footer/footer'
@@ -22,7 +26,11 @@ const AppRoutes = () => {
     { path: '/nosotros', element: <Nosotros /> },
     { path: '/recetas', element: <Recetas /> },
     { path: '/ubicaciones', element: <Ubicaciones /> },
-    { path: '/inicioSesion', element: <Login /> }
+    { path: '/inicioSesion', element: <Login /> },
+    { path: '/Brownie', element: <Brownie /> },
+    { path: '/Galletas', element: <Galletas /> },
+    { path: '/Ganache', element: <Ganache /> }
+
 
   ])
 

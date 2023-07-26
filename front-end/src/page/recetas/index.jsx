@@ -9,6 +9,8 @@ import betun from '../../assets/img/recetas/betun.jpg';
 import cremaPastelera from '../../assets/img/recetas/cremaPastelera.jpg';
 import cupcake from '../../assets/img/recetas/cupcake.jpg';
 
+import Brownie from './Brownie'; 
+
 const Recipes = () => {
     return(
         <div>
@@ -31,7 +33,7 @@ const Recipes = () => {
                         Duis euismod lacus id laoreet luctus. Vivamus sed lorem sagittis, ultricies dui eget, pharetra purus. 
                         Fusce ac orci sed arcu posuere commodo.
                     </p>
-                    <button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button>
+                    <a href='/Brownie'><button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button></a>
                 </div>
                 <div className='flex flex-col items-center mb-14 gap-5'>
                     <img className='w-4/5' src={galletasM} alt="" />
@@ -42,7 +44,7 @@ const Recipes = () => {
                         Duis euismod lacus id laoreet luctus. Vivamus sed lorem sagittis, ultricies dui eget, pharetra purus. 
                         Fusce ac orci sed arcu posuere commodo.
                     </p>
-                    <button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button>
+                    <a href="/Galletas"><button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button></a>
                 </div>
                 <div className='flex flex-col items-center mb-14 gap-5'>
                     <img className='w-4/5' src={ganache} alt="" />
@@ -53,7 +55,7 @@ const Recipes = () => {
                         Duis euismod lacus id laoreet luctus. Vivamus sed lorem sagittis, ultricies dui eget, pharetra purus. 
                         Fusce ac orci sed arcu posuere commodo.
                     </p>
-                    <button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button>
+                    <a href="/Ganache"><button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button></a>
                 </div>
                 <div className='flex flex-col items-center mb-14 gap-5'>
                     <img className='w-4/5' src={mixEasy} alt="" />
@@ -108,7 +110,7 @@ const Recipes = () => {
                         Duis euismod lacus id laoreet luctus. Vivamus sed lorem sagittis, ultricies dui eget, pharetra purus. 
                         Fusce ac orci sed arcu posuere commodo.
                     </p>
-                    <button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button>
+                    <a href="#"><button className='border-2 border-[black] border-opacity-50 px-14 py-3 font-bold hover:bg-black hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>Ver mas</button></a>
                 </div>
                 <div className='flex flex-col items-center mb-14 gap-5'>
                     <img className='w-4/5' src={cupcake} alt="" />
