@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^1.0.6",
+    "@mercadopago/sdk-react": "^0.0.13",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "boxicons": "^2.1.4",

@@ -1,6 +1,7 @@
 import { Fragment, useState, useEffect } from 'react'
 import axios from 'axios'
 import { Dialog, Transition } from '@headlessui/react'
+import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 // import { XMarkIcon } from '@heroicons/react/24/outline'
 export default function carrito({producto}) {
   const [open, setOpen] = useState(true)
@@ -20,6 +21,34 @@ export default function carrito({producto}) {
     fetchData();
   }, []);
 
+  //MercadoPago
+  const [preferenceId, setPreferenceId] = useState(null);
+
+  initMercadoPago("TEST-5ab263fe-3eaa-4306-ae45-2e616604cd24");
+
+  const createPreference = async () => {
+    try {
+      carBtn.remove();
+      const response = await axios.post("http://localhost:8080/create_preference", {
+        description: "Pago de mercancia CIM",
+        price: 2500,
+        quantity: 1,
+        currency_id: "MXN",
+      });
+      const { id } = response.data;
+      return id;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleBuy = async () => {
+    const id = await createPreference();
+    if (id) {
+      setPreferenceId(id);
+    }
+  };
+  //Fin mercadopago
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -114,12 +143,8 @@ export default function carrito({producto}) {
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
-                        <a
-                          href="#"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                        >
-                          Checkout
-                        </a>
+                        <button id="carBtn" onClick={handleBuy} className='bg-[#EA8239] w-full py-3 rounded-lg text-white text-2xl font-medium'>Comprar</button>
+                        {preferenceId && <Wallet initialization={{ preferenceId }} />}
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
